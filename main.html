@@ -5,7 +5,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Nicolás Pla Mollá</title>
-		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="css/styles.css">
 	</head>
 
 	<body>
@@ -16,7 +16,6 @@
 					<li><a href="#projects">Proyectos</a></li>
 					<li><a href="#languajes">Lenguajes</a></li>
 					<li><a href="#contact">Contáctame</a></li>
-					<li>Cambiar idioma</li> <!-- TO DO - QUE CAMBIE EL IDIOMA CON UN BOTÓN -->
 					<li>
 						<label for="language-select">🌍 Idioma:</label>
 						<select id="language-select" onchange="cambiarIdioma(this.value)">
@@ -29,9 +28,50 @@
 		</header>
 
 		<section id="projects">
-			<h1>Mayores Proyectos</h1>
-			<h2>Judges a book <span class="highlight">by its cover</span>...</h2>
-			<p>A self-taught UI/UX designer, functioning in the industry for 3+ years now.</p>
+			<h1>Principales Proyectos</h1>
+			<div class="carousel-container">
+				<div class="containerVertical">
+					<div class="slideContainer">
+						<div class="mainContainerCarouselFinal" style="--screenWidth: 1382.4px;">
+							<div class="slideTemplate backgroundColor">
+								<h2>Seguimiento guardias profesores</h2>
+								<p>Módulo de Odoo desarrollado para facilitar el seguimiento de qué profesores cubren
+									las faltas de qué grupos.</p>
+								<img src="scr/img/Odoo_icon.png" alt="Logo de Odoo">
+							</div>
+							<div class="slideTemplate backgroundColor">
+								<h2>Achievement Tracker</h2>
+								<p>Una aplicación para Android/iOS para el seguimiento de logros de videojuegos en
+									distintas plataformas.</p><img src="scr/img/achievement.webp" alt="Icono de la aplicación">
+							</div>
+							<div class="slideTemplate backgroundColor">
+								<h2>Repentance Dungeon</h2>
+								<p>Videojuego rogue-lite, top-down shooter, acción, fantasía multiplataforma.</p><img
+									src="scr/img/godot.png" alt="Imagen promocional del videojuego">
+							</div>
+							<div class="slideTemplate backgroundColor">
+								<h2>Repositorio de Acceso a Datos</h2>
+								<p>Casi todos los proyectos del módulo Acceso a Datos del curso.</p><img
+									src="scr/img/database.png" alt="">
+							</div>
+							<div class="slideTemplate backgroundColor">
+								<h2>Sitio web añejo</h2>
+								<p>Sitio web desarrollado en 2020 para clase de `Aplicaciones web`.</p><img
+									src="scr/img/html-5.png" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="controlerFinalCarousel">
+						<div><img src="https://www.htmlcssbuttongenerator.com/image/arrowLeft.png"
+								style="transform: rotate(180deg);" height="12px" width="12px"
+								alt="controler to the right">
+						</div>
+						<div><img src="https://www.htmlcssbuttongenerator.com/image/arrowLeft.png" height="12px"
+								width="12px" alt="controler to the right"></div>
+					</div>
+				</div>
+				<script src="js/carousel.js"></script>
+			</div>
 		</section>
 
 		<section id="languajes">
@@ -47,6 +87,7 @@
 			<p>Email: <a href="mailto:nicopla808@gmail.com">nicopla808@gmail.com</a></p>
 			<a href="https://github.com/Dankranikun?tab=repositories">GitHub</a>
 			<a href="https://www.linkedin.com/in/nicolasplamolla/">LinkedIn/nicolasplamolla</a>
+			<a href="https://dankrani.itch.io/">Itch.Io</a>
 		</section>
 	</body>
 
