@@ -1,21 +1,324 @@
-body {
+:root{
+	/* General */
+	--txt-color: #FFFFFF;
+	--bg-color1:#4b0e56;
+	--bg-color2:#2b215a;
+	/* Header */
+	--h-bg-color:#2b215a;
+	/* Nav SVGs */
+	--nav-SVG-size:50px;
+	--nav-SVG-color:#FFF;
+	/* Cards */
+	--card-txt-color:#000;
+	--card-h2-size:18px;
+	--card-txt-size: 12px;
+	--card-lbg-ori:90deg;
+	--card-lbg-1:#d0a2eb;
+	--card-lbg-2:#9400d9;
+	--card-shadow-color:#000000bf;
+	/* Cards Slider Buttons*/
+	--card-SVG-size: 50px;
+	--card-SVG-color: #FFF;
+}
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
 	font-family: Arial, sans-serif;
-	margin: 0;
-	padding: 0;
-	background: rgb(75, 14, 86);
-	background: radial-gradient(circle, rgba(75, 14, 86, 1) 0%, rgba(43, 33, 90, 1) 100%);
-	color: white;
+	color:var(--txt-color);
+}
+
+a{
+	text-decoration: none;
+}
+h1,h2 {
 	text-align: center;
 }
 
-header {
-	background: #2b215a;
-	padding: 15px;
-	position: fixed;
-	width: 100%;
-	top: 0;
-	z-index: 1000;
+/* Body */
+body {
+	background-image: radial-gradient(circle, var(--bg-color1), var(--bg-color2));
+	color: var(--txt-color);
+	height: 200vh;
 }
+
+/* Header */
+header{
+	background-color: var(--h-bg-color);
+	position: sticky;
+	top:0;
+	z-index: 1;
+	padding: 15px 1vw 15px 20vw;
+}
+/* Nav*/
+nav{
+	display:flex;
+	align-items: center;
+}
+header nav a:first-child{
+	display: inline-block;
+	width: fit-content;
+	height: fit-content;
+}
+
+header nav a:first-child img{
+	display: block;
+	transform:matrix(-1, 0, 0, 1, 0, 0);
+	width: 50px;
+}
+nav ul{
+	list-style-type:none;
+	margin-block:0;
+	margin-inline:0;
+	padding-inline:0;
+	width: calc(100% - 50px);
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+nav ul li{
+	display:inline-block;
+	font-size: 20px;
+	width: var(--nav-SVG-size);
+	height: var(--nav-SVG-size);
+}
+header nav ul li a{
+	display:flex;
+	justify-content: center;
+}
+header nav ul li a img{
+	width: var(--nav-SVG-size);
+	height: var(--nav-SVG-size);
+}
+nav div{
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+nav div select {
+	background-color: transparent;
+	border:none;
+	color:var(--txt-color);
+}
+nav div select option{
+	color:var(--card-txt-color);
+}
+/* SVGs */
+
+#projects div:not(:first-child){
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+}
+#projects div:not(:first-child) > a{
+	width: var(--card-SVG-size);
+	height: var(--card-SVG-size);
+	display:inline-block;
+}
+/* Cards */
+#carousel {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+#carousel [data-content="cards"] {
+	display: flex;
+	transition: transform 0.5s ease-in-out;
+	/* Transición suave */
+}
+
+.card {
+	flex: 0 0 20%;
+}
+
+.card img{
+	width: 150px;
+}
+
+#carousel button {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	border: none;
+	padding: 10px;
+	cursor: pointer;
+}
+
+#carousel button[data-carousel="left"] {
+	left: 10px;
+}
+
+#carousel button[data-carousel="right"] {
+	right: 10px;
+}
+/*
+#projects div[data-content="cards"] article:first-child{
+	margin: 0 5px 0 0;
+}
+#projects div[data-content="cards"] article:last-child{
+	margin: 0 0 0 5px;
+}
+#projects div[data-content="cards"] article a{
+	height: 100%;
+	padding: 15px;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 2em 1fr 150px;
+	grid-column-gap: 0px;
+	grid-row-gap: 10px;
+	align-items: center;
+	justify-items: center;
+}
+#projects div[data-content="cards"] article a h2{
+	font-size: var(--card-h2-size);
+	text-align: center;
+	grid-area: 1 / 1 / 2 / 2;
+}
+#projects div[data-content="cards"] article a p{
+	margin-block: 15px;
+	margin: auto 0;
+	font-size: var(--card-txt-size);
+	text-align: justify;
+	grid-area: 2 / 1 / 3 / 2;
+}
+#projects div[data-content="cards"] article a img {
+	margin-top:auto;
+	max-height: 150px;
+	height: 150px;
+	grid-area: 3 / 1 / 4 / 2;
+}
+
+#carousel {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.card {
+	flex: 0 0 20%;
+	box-sizing: border-box;
+	padding: 10px;
+	text-align: center;
+	border: 1px solid #ccc;
+}
+
+#carousel button{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	border: none;
+	padding: 10px;
+	cursor: pointer;
+}
+
+#carousel [data-carousel="left"]{
+	left: 10px;
+}
+
+#carousel [data-carousel="right"]{
+	right: 10px;
+}
+/*
+
+#carousel [data-content="cards"] {
+	display: flex;
+	transition: transform 0.5s ease-in-out;
+	justify-content: space-between;
+	align-items: stretch;
+	padding: 15px 0;
+}
+
+#carousel [data-content="cards"] article {
+	display: flex;
+	flex-direction: column;
+	max-height: 350px;
+	height: 350px;
+	flex: 0 0 calc( (100vw/5) - (3*7px) );
+	color:var(--card-txt-color);
+	background-image:linear-gradient(var(--card-lbg-ori), var(--card-lbg-1), var(--card-lbg-2));
+	border-radius: 15px;
+	-webkit-box-shadow: 6px 4px 5px 0px var(--card-shadow-color);
+	-moz-box-shadow: 6px 4px 5px 0px var(--card-shadow-color);
+	box-shadow: 6px 4px 5px 0px var(--card-shadow-color);
+	margin: 0 5px;
+}
+
+#carousel button {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: rgba(0, 0, 0, 0.5);
+	border: none;
+	padding: 10px;
+	cursor: pointer;
+	width: var(--card-SVG-size);
+}
+
+#carousel [data-carousel="left"] {
+	left: 10px;
+}
+
+#carousel [data-carousel="right"] {
+	right: 10px;
+	transform:matrix(-1, 0, 0, 1, 0, 0);
+}
+
+#carousel button:disabled {
+	filter: opacity(0.5);
+	cursor: not-allowed;
+}*/
+
+/* Custom Selector */
+#custom-select {
+	position: relative;
+	display: inline-block;
+}
+
+#language-selected {
+	background-color: #f7f7f7;
+	color: #333333;
+	padding: 5px 10px;
+	cursor: pointer;
+}
+
+/* Style the dropdown items */
+.select-language {
+	position: absolute;
+	display: none;
+	background-color: black;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	border-radius: 4px;
+	z-index: 1;
+	width: 100%;
+}
+
+/* Style the dropdown items */
+.select-language div {
+	padding: 10px;
+	cursor: pointer;
+}
+
+/* Style the dropdown items on hover */
+.select-language div:hover {
+	background-color: transparent;
+}
+
+.langFlag {
+	display:inline-block;
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+}
+
+/*
 
 nav ul {
 	list-style: none;
@@ -338,4 +641,4 @@ button:hover {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-}
+}*/

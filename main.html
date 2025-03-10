@@ -1,94 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es-ES">
 	<head>
-		<meta charset="UTF-8">
+		<meta charset="utf-8">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="author" content="Nicolás Pla Mollá">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="assets/css/styles.css">
+		<script src="assets/js/script.js" defer></script>
 		<title>Nicolás Pla Mollá</title>
-		<link rel="stylesheet" href="css/styles.css">
 	</head>
-
 	<body>
 		<header>
 			<nav>
-				<ul>
-					<li></li>
-					<li><a href="#projects">Proyectos</a></li>
-					<li><a href="#languajes">Lenguajes</a></li>
-					<li><a href="#contact">Contáctame</a></li>
-					<li>
-						<label for="language-select">🌍 Idioma:</label>
-						<select id="language-select" onchange="cambiarIdioma(this.value)">
-							<option value="es">🇪🇸 Español</option>
-							<option value="en">🇬🇧 Inglés</option>
-						</select>
-					</li>
-				</ul>
-			</nav>
-		</header>
-
-		<section id="projects">
-			<h1>Principales Proyectos</h1>
-			<div class="carousel-container">
-				<div class="containerVertical">
-					<div class="slideContainer">
-						<div class="mainContainerCarouselFinal" style="--screenWidth: 1382.4px;">
-							<div class="slideTemplate backgroundColor">
-								<h2>Seguimiento guardias profesores</h2>
-								<p>Módulo de Odoo desarrollado para facilitar el seguimiento de qué profesores cubren
-									las faltas de qué grupos.</p>
-								<img src="scr/img/Odoo_icon.png" alt="Logo de Odoo">
-							</div>
-							<div class="slideTemplate backgroundColor">
-								<h2>Achievement Tracker</h2>
-								<p>Una aplicación para Android/iOS para el seguimiento de logros de videojuegos en
-									distintas plataformas.</p><img src="scr/img/achievement.webp" alt="Icono de la aplicación">
-							</div>
-							<div class="slideTemplate backgroundColor">
-								<h2>Repentance Dungeon</h2>
-								<p>Videojuego rogue-lite, top-down shooter, acción, fantasía multiplataforma.</p><img
-									src="scr/img/godot.png" alt="Imagen promocional del videojuego">
-							</div>
-							<div class="slideTemplate backgroundColor">
-								<h2>Repositorio de Acceso a Datos</h2>
-								<p>Casi todos los proyectos del módulo Acceso a Datos del curso.</p><img
-									src="scr/img/database.png" alt="">
-							</div>
-							<div class="slideTemplate backgroundColor">
-								<h2>Sitio web añejo</h2>
-								<p>Sitio web desarrollado en 2020 para clase de `Aplicaciones web`.</p><img
-									src="scr/img/html-5.png" alt="">
-							</div>
-						</div>
+				<a href="#contact"><img src="assets/img/Yo.png" alt="Mi foto" title="Contacto"></a>
+				<ul><li><a href="#projects" title="Proyectos"><img src="assets/img/SVGs/Proyectos.svg" alt="Proyectos"></a></li><li><a href="#languajes" title="Lenguajes"><img src="assets/img/SVGs/Lenguajes.svg" alt="Lenguajes"></a></li></ul>
+				<div id="custom-select">
+					<label for="language-selected">🌍</label>
+					<div id="language-selected">
+						Select an Option
 					</div>
-					<div class="controlerFinalCarousel">
-						<div><img src="https://www.htmlcssbuttongenerator.com/image/arrowLeft.png"
-								style="transform: rotate(180deg);" height="12px" width="12px"
-								alt="controler to the right">
-						</div>
-						<div><img src="https://www.htmlcssbuttongenerator.com/image/arrowLeft.png" height="12px"
-								width="12px" alt="controler to the right"></div>
+					<div class="select-language">
+						<div data-lang-value="en-GB"><img src="assets/img/Flags/GB.png" class="langFlag">Inglés</div>
+						<div data-lang-value="es-ES"><img src="assets/img/Flags/ES.png" class="langFlag">Español</div>
 					</div>
 				</div>
-				<script src="js/carousel.js"></script>
-			</div>
-		</section>
+			</nav>
+		</header>
+		<main>
+			<section id="projects">
+				<h1>Principales Proyectos</h1>
+				<template>
+					<article class="card">
+						<a>
+							<h2></h2>
+							<p></p>
+							<img src="" alt="" title="">
+						</a>
+					</article>
+				</template>
+				<div id="carousel">
+					<div data-content="cards"></div>
+					<button data-carousel="left"><img src="assets/img/SVGs/Flecha.svg" alt="Izquierda"></button>
+					<button data-carousel="right"><img src="assets/img/SVGs/Flecha.svg" alt="Derecha"></button>
+				</div>
+				<!--
+								
+								<div class="slideTemplate backgroundColor">
+									<h2></h2>
+									<p></p><img
+										src="scr/img/html-5.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="controlerFinalCarousel">
+							<div><img src="https://www.htmlcssbuttongenerator.com/image/arrowLeft.png"
+									style="transform: rotate(180deg);" height="12px" width="12px"
+									alt="controler to the right">
+							</div>
+							<div><img src="https://www.htmlcssbuttongenerator.com/image/arrowLeft.png" height="12px"
+									width="12px" alt="controler to the right"></div>
+						</div>
+					</div>
+					<script src="js/carousel.js"></script>
+				</div>-->
+			</section>
 
-		<section id="languajes">
-			<h2>Work Experience</h2>
-			<p>Currently, I'm a Software Engineer at <span class="highlight">Facebook</span></p>
-		</section>
+			<section id="languajes">
+				<h2>Work Experience</h2>
+				<p>Currently, I'm a Software Engineer at <span class="highlight">Facebook</span></p>
+			</section>
 
-		<section id="contact">
-			<h2>Contact</h2>
-			<p>I'm currently looking to join a cross-functional team that values improving people's lives through
-				accessible
-				design. Have a project in mind? Let's connect.</p>
-			<p>Email: <a href="mailto:nicopla808@gmail.com">nicopla808@gmail.com</a></p>
-			<a href="https://github.com/Dankranikun?tab=repositories">GitHub</a>
-			<a href="https://www.linkedin.com/in/nicolasplamolla/">LinkedIn/nicolasplamolla</a>
-			<a href="https://dankrani.itch.io/">Itch.Io</a>
-		</section>
+			<section id="contact">
+				<h2>Contact</h2>
+				<p>I'm currently looking to join a cross-functional team that values improving people's lives through
+					accessible
+					design. Have a project in mind? Let's connect.</p>
+				<p>Email: <a href="mailto:nicopla808@gmail.com">nicopla808@gmail.com</a></p>
+				<a href="https://github.com/Dankranikun?tab=repositories">GitHub</a>
+				<a href="https://www.linkedin.com/in/nicolasplamolla/">LinkedIn/nicolasplamolla</a>
+				<a href="https://dankrani.itch.io/">Itch.Io</a>
+			</section>
+		</main>
 	</body>
-
 </html>
