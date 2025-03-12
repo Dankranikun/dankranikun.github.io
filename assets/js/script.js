@@ -48,64 +48,64 @@ document.addEventListener("DOMContentLoaded", function () {
 		{
 			img: {
 				src: "java.png",
-				alt: "",
-				title: "",
+				alt: "Java",
+				title: "Java",
 			},
 			progress: "Avanzado",
 		},
 		{
 			img: {
 				src: "c-sharp.png",
-				alt: "",
-				title: "",
+				alt: "C#",
+				title: "C#",
 			},
 			progress: "Junior",
 		},
 		{
 			img: {
 				src: "mysql.png",
-				alt: "",
-				title: "",
+				alt: "MySQL",
+				title: "MySQL",
 			},
 			progress: "Avanzado",
 		},
 		{
 			img: {
 				src: "gdscript.png",
-				alt: "",
-				title: "",
+				alt: "GDScript (Godot)",
+				title: "GDScript (Godot)",
 			},
 			progress: "Novato",
 		},
 		{
 			img: {
 				src: "html-5.png",
-				alt: "",
-				title: "",
+				alt: "HTML",
+				title: "HTML",
 			},
 			progress: "Junior",
 		},
 		{
 			img: {
 				src: "css-3.png",
-				alt: "",
-				title: "",
+				alt: "CSS",
+				title: "CSS",
 			},
 			progress: "Junior",
 		},
 		{
 			img: {
 				src: "java-script.png",
-				alt: "",
-				title: "",
+				alt: "JavaScript",
+				title: "JavaScript",
 			},
 			progress: "Junior",
 		},
 		{
 			img: {
 				src: "\\SVGs\\SQLite.svg",
-				alt: "",
-				title: "",
+				alt: "SQLite",
+				title: "SQLite",
 			},
 			progress: "Junior",
 		},
@@ -114,56 +114,56 @@ document.addEventListener("DOMContentLoaded", function () {
 		{
 			img: {
 				src: "\\SVGs\\NetBeans.svg",
-				alt: "",
-				title: "",
+				alt: "NetBeans",
+				title: "NetBeans",
 			},
 			progress: "Avanzado",
 		},
 		{
 			img: {
 				src: "\\SVGs\\IntelliJ.svg",
-				alt: "",
-				title: "",
+				alt: "IntelliJ Idea",
+				title: "IntelliJ Idea",
 			},
 			progress: "Junior",
 		},
 		{
 			img: {
 				src: "\\SVGs\\mongodb.svg",
-				alt: "",
-				title: "",
+				alt: "MongoDB",
+				title: "MongoDB",
 			},
-			progress: "Avanzado",
+			progress: "Junior",
 		},
 		{
 			img: {
 				src: "\\SVGs\\hibernate.svg",
-				alt: "",
-				title: "",
+				alt: "Hibernate",
+				title: "Hibernate",
 			},
 			progress: "Novato",
 		},
 		{
 			img: {
 				src: "\\SVGs\\jhipster.svg",
-				alt: "",
-				title: "",
+				alt: "JHipster",
+				title: "JHipster",
 			},
-			progress: "Junior",
+			progress: "Novato",
 		},
 		{
 			img: {
 				src: "unity.png",
-				alt: "",
-				title: "",
+				alt: "Unity",
+				title: "Unity",
 			},
 			progress: "Junior",
 		},
 		{
 			img: {
 				src: "godot.png",
-				alt: "",
-				title: "",
+				alt: "Godot",
+				title: "Godot",
 			},
 			progress: "Junior",
 		},
@@ -305,7 +305,11 @@ document.addEventListener("DOMContentLoaded", function () {
 	Cards.addEventListener("transitionend", handleReset);
 	// Rellena Cards, con el template - Solo hay uno, así que con querySelector va bien. Podría usarse querySelectorAll(...)[0].
 
-	popularLenguaje(LangBox, document.querySelectorAll("template")[0], progLang);
+	popularLenguaje(
+		LangBox,
+		document.querySelectorAll("template")[0],
+		progLang
+	);
 	popularLenguaje(EnvBox, document.querySelectorAll("template")[0], progEnv);
 	popuLate(Cards, document.querySelectorAll("template")[1]);
 

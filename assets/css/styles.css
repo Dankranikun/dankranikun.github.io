@@ -4,7 +4,7 @@
 	--bg-color1: #4b0e56;
 	--bg-color2: #2b215a;
 	/* Header */
-	--h-bg-color: #2b215a;
+	--h-bg-color: #392b79;
 	/* Nav SVGs */
 	--nav-SVG-size: 50px;
 	--nav-SVG-color: #FFF;
@@ -14,7 +14,7 @@
 	--card-txt-size: 12px;
 	--card-lbg-ori: 90deg;
 	--card-lbg-1: #d0a2eb;
-	--card-lbg-2: #9400d9;
+	--card-lbg-2: hsl(281, 100%, 43%);
 	--card-shadow-color: #000000bf;
 	/* Cards Slider Buttons*/
 	--card-SVG-size: 50px;
@@ -181,7 +181,8 @@ nav div select option {
 	color: #FFF;
 }
 
-.languajesBox, .enviromentBox {
+.languajesBox,
+.enviromentBox {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -204,6 +205,90 @@ figure img {
 	width: 100px;
 	height: 100px;
 }
+
+#contact p {
+	text-align: center;
+	padding: 8px 0 0 0;
+}
+
+
+
+#about p {
+	text-align: center;
+	padding: 10px 75px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+	align-content: center;
+	border: 5px #000 solid;
+	margin: 0 10% 0 10%;
+	background-color: #40004b;
+	border-radius: 25px;
+	margin: 35px 0 50px 0;
+}
+
+#about h2 {
+	margin: 25px 0 0 0;
+}
+
+#languajes p {
+	text-align: center;
+	margin: 15px 0 5px 0;
+}
+
+#contact section {
+	text-align: center;
+	padding: 10px 75px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+	align-content: center;
+	border: 5px #000 solid;
+	margin: 0 10% 0 10%;
+	background-color: #40004b;
+	border-radius: 25px;
+	margin: 35px 0 50px 0;
+}
+
+#projects h1 {
+	padding: 29px 0 16px 0;
+}
+
+#contact div {
+	text-align: center;
+	padding: 10px 75px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+	align-content: center;
+	border: 5px #000 solid;
+	margin: 0 10% 0 10%;
+	/*background-color: #6d237a;*/
+	border-radius: 25px;
+	margin: 35px 0 50px 0;
+	background-color: black;
+
+	animation: 1s infinite alternate ease-out breathing-color--dark;
+}
+
+@keyframes breathing-color--dark {
+	from {
+		background-color: #430169;
+	}
+
+	to {
+		background-color: #530083;
+	}
+};
+
+
+
 
 /*
 #projects div[data-content="cards"] article:first-child{
