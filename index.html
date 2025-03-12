@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="author" content="Nicolás Pla Mollá">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="assets/css/styles.css">
+		<script src="assets/js/script.js" defer></script>
+		<title>Nicolás Pla Mollá</title>
+	</head>
+
+	<!--Encabezado sticky-->
+
+	<body>
+		<header>
+			<nav>
+				<a href="#contact"><img src="assets/img/Yo.png" alt="Mi foto" title="Contacto"></a>
+				<ul>
+					<li><a href="#projects" title="Proyectos"><img src="assets/img/SVGs/Proyectos.svg"
+								alt="Proyectos"></a></li>
+					<li><a href="#languajes" title="Lenguajes"><img src="assets/img/SVGs/Lenguajes.svg"
+								alt="Lenguajes"></a></li>
+				</ul>
+				<div id="custom-select">
+					<label for="language-selected">🌍</label>
+					<div id="language-selected">
+						Select an Option
+					</div>
+					<div class="select-language">
+						<div data-lang-value="en-GB"><img src="assets/img/Flags/GB.png" class="langFlag">Inglés</div>
+						<div data-lang-value="es-ES"><img src="assets/img/Flags/ES.png" class="langFlag">Español</div>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<main>
+
+			<!--Sobre mi/About me-->
+			<section id="about">
+				<h2>Desarrollador de aplicaciones multiplataforma</h2>
+				<p>Programador junior formado en Iniesta por profesores que sí que enseñaban.<br>Con pasión por
+					participar en nuevos proyectos que me ayuden a crecer como persona y profesional</p>
+			</section>
+
+			<!--Lenguajes y entornos-->
+			<section id="languajes">
+				<h2>Lenguajes y entornos</h2>
+				<p>Estos son los lenguajes con los que trabajo:</p>
+				<template>
+					<figure>
+						<img src="" alt="" title="">
+						<figcaption>
+							<div class="progressBar">
+								<div></div>
+							</div>
+						</figcaption>
+					</figure>
+				</template>
+				<div class="languajesBox">
+				</div>
+				<p>Y estos son los entornos con los que estoy familiarizado:</p>
+				<div class="enviromentBox">
+				</div>
+			</section>
+
+			<!--Carrousel de proyectos-->
+			<section id="projects">
+				<h1>Principales Proyectos</h1>
+				<template>
+					<article class="card">
+						<a>
+							<h2></h2>
+							<p></p>
+							<img src="" alt="" title="">
+						</a>
+					</article>
+				</template>
+				<div id="carousel">
+					<div data-content="cards"></div>
+					<button data-carousel="left"><img src="assets/img/SVGs/Flecha.svg" alt="Izquierda"></button>
+					<button data-carousel="right"><img src="assets/img/SVGs/Flecha.svg" alt="Derecha"></button>
+				</div>
+			</section>
+
+			<!--Contacto-->
+			<section id="contact">
+				<h2>Contacto</h2>
+				<div>
+					<p>Interesado en un trabajo en el que mi puesto y persona se valoren.</p>
+					<p><a href="mailto:nicopla808@gmail.com"></a><img
+							src="https://cdn-icons-png.freepik.com/512/14952/14952206.png" width="20px" , height="20px">
+						nicopla808@gmail.com</a>
+					</p>
+					<p><a href="https://www.linkedin.com/in/nicolasplamolla/"><img
+								src="https://cdn-icons-png.freepik.com/512/254/254394.png?ga=GA1.1.1088679857.1741811039"
+								width="20px" height="20px">LinkedIn/nicolasplamolla</a></p>
+					<p><a href="https://github.com/Dankranikun"><img
+								src="https://cdn-icons-png.freepik.com/512/3291/3291695.png?ga=GA1.1.1088679857.1741811039"
+								width="20px" height="20px">GitHub</a>
+					</p>
+
+					<p><a href="https://dankrani.itch.io/"><img
+								src="https://static.itch.io/images/itchio-textless-black.svg" width="20px"
+								height="20px">Itch.Io</a></p>
+					<p><a href="assets/NicolasPlaMolla.pdf" download="CV_NicolasPM"><img
+								src="https://cdn-icons-png.flaticon.com/512/2991/2991112.png " width="20px"
+								height="20px">Descarga mi currículum</a></p>
+				</div>
+			</section>
+		</main>
+	</body>
+
+</html>
