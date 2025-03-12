@@ -172,8 +172,37 @@ nav div select option {
 	right: 10px;
 }
 
-#languajes div {
-	background-color: #2b215a;
+.progressBar {
+	background-color: #000;
+}
+
+.progressBar div {
+	background-color: #a66ac9;
+	color: #FFF;
+}
+
+.languajesBox, .enviromentBox {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+	align-content: center;
+	border: 5px #000 solid;
+	margin: 0 10%;
+	background-color: #40004b;
+	border-radius: 25px;
+}
+
+figure {
+	display: flex;
+	flex-direction: column;
+	padding: 18px 0;
+}
+
+figure img {
+	width: 100px;
+	height: 100px;
 }
 
 /*

@@ -9,7 +9,166 @@ document.addEventListener("DOMContentLoaded", function () {
 	function cambiarIdioma(lang) {
 		document.documentElement.lang = lang;
 	}
-	// Función para llenar las cartas. Coge el objeto extendedItems y crea una carta para cada elemente basandose en un lugar donde poner la carta final, y un template designado.
+
+	function popularLenguaje(place, element, objetos) {
+		place.innerHTML = "";
+		objetos.forEach((el) => {
+			const newEl = element.content.cloneNode(true);
+			newEl
+				.querySelector("img")
+				.setAttribute("src", `assets/img/${el.img.src}`);
+			newEl.querySelector("img").setAttribute("alt", el.img.alt);
+			newEl.querySelector("img").setAttribute("title", el.img.title);
+			newEl.querySelector("div").children[0].textContent = el.progress;
+			let valor = 0;
+			switch (el.progress) {
+				case "Senior":
+					valor = 100;
+					break;
+				case "Avanzado":
+					valor = 75;
+					break;
+				case "Junior":
+					valor = 50;
+					break;
+				case "Novato":
+					valor = 25;
+					break;
+				default:
+					console.log(`Oopsie : ${el.progress}`);
+					break;
+			}
+			newEl.querySelector("div").children[0].style.width = valor + "%";
+			place.appendChild(newEl);
+		});
+	}
+	const EnvBox = document.getElementsByClassName("enviromentBox")[0];
+	const LangBox = document.getElementsByClassName("languajesBox")[0];
+	const progLang = [
+		{
+			img: {
+				src: "java.png",
+				alt: "",
+				title: "",
+			},
+			progress: "Avanzado",
+		},
+		{
+			img: {
+				src: "c-sharp.png",
+				alt: "",
+				title: "",
+			},
+			progress: "Junior",
+		},
+		{
+			img: {
+				src: "mysql.png",
+				alt: "",
+				title: "",
+			},
+			progress: "Avanzado",
+		},
+		{
+			img: {
+				src: "gdscript.png",
+				alt: "",
+				title: "",
+			},
+			progress: "Novato",
+		},
+		{
+			img: {
+				src: "html-5.png",
+				alt: "",
+				title: "",
+			},
+			progress: "Junior",
+		},
+		{
+			img: {
+				src: "css-3.png",
+				alt: "",
+				title: "",
+			},
+			progress: "Junior",
+		},
+		{
+			img: {
+				src: "java-script.png",
+				alt: "",
+				title: "",
+			},
+			progress: "Junior",
+		},
+		{
+			img: {
+				src: "\\SVGs\\SQLite.svg",
+				alt: "",
+				title: "",
+			},
+			progress: "Junior",
+		},
+	];
+	const progEnv = [
+		{
+			img: {
+				src: "\\SVGs\\NetBeans.svg",
+				alt: "",
+				title: "",
+			},
+			progress: "Avanzado",
+		},
+		{
+			img: {
+				src: "\\SVGs\\IntelliJ.svg",
+				alt: "",
+				title: "",
+			},
+			progress: "Junior",
+		},
+		{
+			img: {
+				src: "\\SVGs\\mongodb.svg",
+				alt: "",
+				title: "",
+			},
+			progress: "Avanzado",
+		},
+		{
+			img: {
+				src: "\\SVGs\\hibernate.svg",
+				alt: "",
+				title: "",
+			},
+			progress: "Novato",
+		},
+		{
+			img: {
+				src: "\\SVGs\\jhipster.svg",
+				alt: "",
+				title: "",
+			},
+			progress: "Junior",
+		},
+		{
+			img: {
+				src: "unity.png",
+				alt: "",
+				title: "",
+			},
+			progress: "Junior",
+		},
+		{
+			img: {
+				src: "godot.png",
+				alt: "",
+				title: "",
+			},
+			progress: "Junior",
+		},
+	];
+	// Función para llenar las cartas. Coge el objeto extendedItems y crea una carta para cada elemento basandose en un lugar donde poner la carta final, y un template designado.
 	function popuLate(place, element) {
 		place.innerHTML = "";
 		extendedItems.forEach((el) => {
@@ -145,7 +304,10 @@ document.addEventListener("DOMContentLoaded", function () {
 	// Añade una escucha en la transición, para ver si ha de restablecer, o no, las cartas.
 	Cards.addEventListener("transitionend", handleReset);
 	// Rellena Cards, con el template - Solo hay uno, así que con querySelector va bien. Podría usarse querySelectorAll(...)[0].
-	popuLate(Cards, document.querySelector("template"));
+
+	popularLenguaje(LangBox, document.querySelectorAll("template")[0], progLang);
+	popularLenguaje(EnvBox, document.querySelectorAll("template")[0], progEnv);
+	popuLate(Cards, document.querySelectorAll("template")[1]);
 
 	// Lang Selector
 	// Get all custom select elements
