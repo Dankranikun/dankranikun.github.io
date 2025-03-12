@@ -217,7 +217,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			title: "Repentance Dungeon",
 			text: "Videojuego rogue-lite, top-down shooter, acción, fantasía multiplataforma.",
 			img: {
-				src: "godot.png",
+				src: "repentanceDungeon.png",
 				alt: "Imagen promocional del videojuego",
 				title: "",
 			},
