@@ -242,6 +242,16 @@ document.addEventListener("DOMContentLoaded", function () {
 				title: "",
 			},
 		},
+		{
+			href: "",
+			title: "Web4M",
+			text: "Web de streming de vídeo sin anuncios.",
+			img: {
+				src: "video.png",
+				alt: "",
+				title: "",
+			},
+		}
 	];
 	const itemsPerSlide = 5;
 	/*
